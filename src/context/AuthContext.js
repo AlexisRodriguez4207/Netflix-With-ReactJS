@@ -3,8 +3,9 @@ import {auth} from '../firebase'
 import {
     createUserWithEmailAndPassword, 
     signInWithEmailAndPassword, 
-    singOut, 
-    onAuthStateChanged} from 'firebase/auth';
+    signOut, 
+    onAuthStateChanged
+} from 'firebase/auth';
 
 const AuthContext = createContext()
 
@@ -20,7 +21,7 @@ export function AuthContextProvider({children}){
     }
 
     function logOut(){
-        return singOut(auth)
+        return signOut(auth)
     }
 
     useEffect(() =>{
